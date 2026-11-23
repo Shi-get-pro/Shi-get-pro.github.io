@@ -275,8 +275,8 @@
         </div>
         <div style="position:relative">
           <div class="portrait">
-            <!-- Add your photo as profile.jpg next to index.html -->
-            <img src="profile.jpg" alt="Mary Shirly" onerror="this.remove()">
+            <!-- Photo: profile.png next to index.html -->
+            <img src="profile.png" alt="Mary Shirly" data-alts="profile.jpg,profile.jpeg,profile.JPG,profile.jpg.jpg,Profile.jpg,Profile.jpeg,Profile.png,profile.webp" onerror="var l=(this.dataset.alts||'').split(',').filter(Boolean);if(l.length){this.dataset.alts=l.slice(1).join(',');this.src=l[0];}else{this.remove();}">
             <div class="ph" aria-hidden="true"><div><b>MS</b><span>Chennai · India</span></div></div>
           </div>
           <div class="badge b2"><div class="n">$1.12M</div><div class="l">saved through billing transparency</div></div>
