@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mary Shirly — Digital Transformation & AI Leader</title>
+<meta name="description" content="Mary Shirly — Associate Director, Business Technology & AI at Verizon Business. Voice of Customer, product-led transformation and AI for customer experience. Chennai, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0e14; --bg2:#10141d; --panel:#151a25; --panel2:#1b2130; --line:rgba(255,255,255,.09);
+    --text:#eceae4; --muted:#9aa0ad; --dim:#6f7584;
+    --gold:#c9a45c; --gold2:#e3c88f; --gold-soft:rgba(201,164,92,.12);
+    --serif:"Cormorant Garamond", Garamond, "Times New Roman", serif;
+    --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:76px}
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  ::selection{background:var(--gold);color:#111}
+
+  /* Header */
+  header{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(11,14,20,.88);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand .mono{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:var(--gold);font-size:16px;letter-spacing:.04em}
+  .brand .nm{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.2em;text-transform:uppercase}
+  nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+  nav a{text-decoration:none;font-size:14px;color:var(--muted);font-weight:500;letter-spacing:.02em;transition:color .2s}
+  nav a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:var(--gold);color:#14110a !important;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s;border:1px solid var(--gold);cursor:pointer;font-family:var(--sans)}
+  .btn:hover{background:var(--gold2);border-color:var(--gold2)}
+  .btn.ghost{background:transparent;color:var(--text) !important;border-color:rgba(255,255,255,.25)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold) !important}
+  .menu-toggle{display:none;background:none;border:0;font-size:24px;cursor:pointer;color:var(--text)}
+
+  /* Hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-250px;background:radial-gradient(circle,rgba(201,164,92,.16),transparent 60%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:64px;align-items:center;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:26px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,6.4vw,88px);line-height:1;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero p.lead{margin-top:28px;font-size:19px;color:var(--muted);max-width:560px}
+  .hero .meta{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .portrait{position:relative;aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden;background:linear-gradient(160deg,#1d2433,#0f131b);border:1px solid rgba(201,164,92,.35)}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .badge{position:absolute;left:-28px;bottom:42px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+  .badge .n{font-family:var(--serif);font-weight:600;font-size:34px;color:var(--gold);line-height:1}
+  .badge .l{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .badge.b2{left:auto;right:-22px;bottom:150px;top:auto}
+  .ticker{margin-top:72px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);position:relative}
+  .ticker div{padding:26px 24px 0 0}
+  .ticker .n{font-family:var(--serif);font-weight:600;font-size:38px;color:var(--text);line-height:1}
+  .ticker .l{font-size:13px;color:var(--muted);margin-top:8px}
+
+  /* Sections */
+  section{padding:120px 0;position:relative}
+  section.alt{background:var(--bg2)}
+  .sec-head{margin-bottom:56px;max-width:760px}
+  .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .kicker::before{content:"";width:28px;height:1px;background:var(--gold)}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,4.6vw,58px);line-height:1.05;letter-spacing:-.005em}
+  h2 em{font-style:italic;color:var(--gold)}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .about-quote{font-family:var(--serif);font-size:30px;line-height:1.35;color:var(--text);font-weight:500}
+  .about-quote em{color:var(--gold)}
+  .about-body p{color:var(--muted);font-size:17px;margin-bottom:18px}
+  .about-body strong{color:var(--text);font-weight:600}
+  .skills{margin-top:72px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .skill{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;transition:border-color .25s,transform .25s}
+  .skill:hover{border-color:rgba(201,164,92,.5);transform:translateY(-3px)}
+  .skill .no{font-family:var(--serif);color:var(--gold);font-size:22px;font-weight:600}
+  .skill h4{font-size:15.5px;font-weight:600;margin:10px 0 8px;line-height:1.35}
+  .skill p{font-size:13.5px;color:var(--muted);line-height:1.55}
+  .tools{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .tools em{font-style:normal;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-right:8px}
+  .tools span{font-size:13px;border:1px solid var(--line);padding:6px 13px;border-radius:999px;color:var(--muted)}
+
+  /* Work bento */
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:34px;position:relative;overflow:hidden}
+  .tile.span4{grid-column:span 4}.tile.span3{grid-column:span 3}.tile.span2{grid-column:span 2}
+  .tile .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,164,92,.4);padding:5px 11px;border-radius:999px;margin-bottom:18px}
+  .tile h3{font-family:var(--serif);font-weight:600;font-size:clamp(26px,2.6vw,34px);line-height:1.12;margin-bottom:14px}
+  .tile p{color:var(--muted);font-size:15.5px}
+  .tile p+p{margin-top:12px}
+  .tile .lbl{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:2px}
+  .roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .roles span{font-size:12.5px;font-weight:600;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+  .roles span+span::before{content:"→ ";color:var(--gold)}
+  .tile.gold{background:linear-gradient(150deg,#c9a45c,#9c7a3a);color:#14110a;border:0;display:flex;flex-direction:column;justify-content:space-between}
+  .tile.gold .n{font-family:var(--serif);font-weight:700;font-size:58px;line-height:1}
+  .tile.gold .l{font-size:14px;font-weight:500;opacity:.8;margin-top:6px}
+  .tile.gold hr{border:0;border-top:1px solid rgba(20,17,10,.25);margin:22px 0}
+  .metric-row{display:flex;gap:32px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .metric-row .n{font-family:var(--serif);font-weight:600;font-size:38px;color:var(--gold);line-height:1}
+  .metric-row .l{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .flow{margin-top:22px;display:grid;gap:10px}
+  .flow div{display:flex;gap:14px;align-items:flex-start;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .flow b{font-family:var(--serif);color:var(--gold);font-size:20px;line-height:1.1;min-width:24px}
+  .flow span{font-size:14px;color:var(--text)}
+  .flow small{display:block;color:var(--muted);font-size:12.5px}
+  .mini .n{font-family:var(--serif);font-weight:600;font-size:46px;color:var(--gold);line-height:1}
+  .mini .l{color:var(--muted);font-size:14px;margin-top:10px}
+  .mini .src{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:18px;font-weight:600}
+
+  /* Leadership */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pillar{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:32px}
+  .pillar .k{font-family:var(--serif);font-size:40px;color:var(--gold);line-height:1;font-weight:600}
+  .pillar h3{font-size:18px;font-weight:600;margin:16px 0 8px}
+  .pillar p{color:var(--muted);font-size:15px}
+  .creed{margin-top:18px;display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+  .creed .q{border:1px solid rgba(201,164,92,.35);border-radius:18px;padding:40px;background:linear-gradient(150deg,rgba(201,164,92,.08),transparent)}
+  .creed .q blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(26px,2.6vw,34px);line-height:1.25;color:var(--text)}
+  .creed .q cite{display:block;margin-top:18px;font-style:normal;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .creed .ai{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:36px}
+  .creed .ai h3{font-family:var(--serif);font-size:28px;font-weight:600;margin-bottom:12px}
+  .creed .ai p{color:var(--muted);font-size:15.5px}
+  .awards{margin-top:48px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .awards em{font-style:normal;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-right:10px}
+  .awards span{border:1px solid var(--line);background:var(--panel);padding:9px 16px;border-radius:999px;font-size:14px}
+  .awards span::before{content:"✦ ";color:var(--gold)}
+
+  /* Experience */
+  .tl{position:relative;padding-left:44px}
+  .tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),rgba(201,164,92,.1))}
+  .job{position:relative;padding-bottom:44px;display:grid;grid-template-columns:200px 1fr;gap:36px}
+  .job::before{content:"";position:absolute;left:-41px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--bg2);border:2px solid var(--gold)}
+  .job.now::before{background:var(--gold);box-shadow:0 0 0 6px rgba(201,164,92,.18)}
+  .job .when{font-size:13.5px;color:var(--muted)}
+  .job .when strong{display:block;color:var(--text);font-weight:600;font-size:14.5px}
+  .job h3{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.2}
+  .job .org{color:var(--gold);font-weight:600;font-size:14px;margin:4px 0 12px;letter-spacing:.02em}
+  .job .sum{color:var(--muted);font-size:15.5px}
+  .job ul{padding-left:18px}
+  .job li{color:#c4c7cf;font-size:15.5px;margin-bottom:8px}
+  .job li::marker{color:var(--gold)}
+  .sub{margin-top:18px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+  .sub .rt{font-weight:600}
+  .sub .rd{font-size:13px;color:var(--muted);margin-bottom:10px}
+  .edu{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .edu div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .edu small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .edu h4{font-size:16px;font-weight:600;margin:8px 0 4px;line-height:1.35}
+  .edu p{color:var(--muted);font-size:13.5px}
+
+  /* Contact */
+  #contact{text-align:center;padding:140px 0;background:radial-gradient(ellipse at center,rgba(201,164,92,.12),transparent 65%)}
+  #contact .kicker{justify-content:center}
+  #contact .kicker::before{display:none}
+  #contact h2{font-size:clamp(40px,6vw,76px);max-width:900px;margin:0 auto}
+  #contact p{color:var(--muted);font-size:18px;max-width:560px;margin:22px auto 0}
+  .contact-links{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  footer{border-top:1px solid var(--line);color:var(--dim);font-size:13.5px;padding:26px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{text-decoration:none}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* Chat widget */
+  .chat-fab{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--gold);color:#14110a;border:0;border-radius:999px;padding:8px 20px 8px 8px;font:600 14px var(--sans);cursor:pointer;box-shadow:0 14px 34px -10px rgba(201,164,92,.55);transition:transform .2s}
+  .chat-fab:hover{transform:translateY(-2px)}
+  .chat-fab .av{width:40px;height:40px;border-radius:50%;background:#14110a;color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:16px;position:relative}
+  .chat-fab .av::after{content:"";position:absolute;right:0;bottom:1px;width:10px;height:10px;border-radius:50%;background:#3ecf8e;border:2px solid var(--gold)}
+  .chat{position:fixed;right:24px;bottom:96px;z-index:60;width:380px;max-width:calc(100vw - 32px);height:560px;max-height:calc(100vh - 130px);background:var(--panel);border:1px solid rgba(201,164,92,.3);border-radius:20px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 70px -20px rgba(0,0,0,.8);opacity:0;transform:translateY(14px) scale(.98);pointer-events:none;transition:all .25s ease}
+  .chat.open{opacity:1;transform:none;pointer-events:auto}
+  .chat-h{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line);background:linear-gradient(150deg,rgba(201,164,92,.12),transparent)}
+  .chat-h .av{width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:var(--gold)}
+  .chat-h b{display:block;font-size:15px}
+  .chat-h small{color:var(--muted);font-size:12px}
+  .chat-h button{margin-left:auto;background:none;border:0;color:var(--muted);font-size:22px;cursor:pointer;line-height:1}
+  .chat-b{flex:1;overflow-y:auto;position:relative;padding:18px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+  .msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14px;line-height:1.55;white-space:pre-line}
+  .msg.bot{background:var(--panel2);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+  .msg.me{background:var(--gold);color:#14110a;border-bottom-right-radius:4px;align-self:flex-end;font-weight:500}
+  .msg a{color:var(--gold2)}
+  .typing{display:inline-flex;gap:4px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:b 1s infinite}
+  .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+  @keyframes b{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 18px 12px}
+  .chips button{background:transparent;border:1px solid rgba(201,164,92,.45);color:var(--gold2);border-radius:999px;padding:6px 11px;font:500 12.5px var(--sans);cursor:pointer}
+  .chips button:hover{background:var(--gold-soft)}
+  .chat-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+  .chat-f input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:11px 16px;color:var(--text);font:14px var(--sans);outline:none}
+  .chat-f input:focus{border-color:var(--gold)}
+  .chat-f button{width:42px;height:42px;border-radius:50%;border:0;background:var(--gold);color:#14110a;font-size:17px;cursor:pointer}
+  .chat-note{font-size:11px;color:var(--dim);text-align:center;padding:0 12px 10px}
+
+  /* Responsive */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:48px}
+    .portrait{max-width:360px}
+    .skills{grid-template-columns:1fr 1fr}
+    .bento{grid-template-columns:1fr 1fr}
+    .tile.span4,.tile.span3{grid-column:span 2}.tile.span2{grid-column:span 1}
+    .about-grid,.creed{grid-template-columns:1fr;gap:28px}
+    .pillars,.edu{grid-template-columns:1fr}
+    .job{grid-template-columns:1fr;gap:8px}
+  }
+  @media (max-width:760px){
+    .menu-toggle{display:block}
+    nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 32px 20px}
+    nav ul.open{display:flex}
+    nav li{width:100%;padding:10px 0}
+    header{background:rgba(11,14,20,.92)}
+    .nav-resume{margin-left:auto;margin-right:14px;padding:8px 16px}
+    .desk-resume{display:none !important}
+    .ticker{grid-template-columns:1fr 1fr}
+    section{padding:84px 0}
+    .badge{left:8px}.badge.b2{right:8px}
+  }
+  @media (max-width:540px){
+    .wrap{padding:0 22px}
+    .skills,.bento{grid-template-columns:1fr}
+    .tile.span2{grid-column:span 1}.tile.span4,.tile.span3{grid-column:span 1}
+    .tile{padding:26px}
+    .brand .nm{font-size:15px;letter-spacing:.14em}
+    .chat{right:12px;left:12px;width:auto;bottom:88px}
+    .chat-fab{right:16px;bottom:16px}
+  }
+  @media (min-width:761px){.nav-resume{display:none}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="mono">MS</span><span class="nm">Mary Shirly</span></a>
+    <a class="btn nav-resume" href="https://drive.google.com/file/d/1Y81Nh9smyNKqKvRJJD6IpfKcf7n2VkQp/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="desk-resume"><a class="btn" href="https://drive.google.com/file/d/1Y81Nh9smyNKqKvRJJD6IpfKcf7n2VkQp/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap" style="width:100%">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Associate Director · Business Technology &amp; AI</div>
+          <h1>I believe the best technology <em>disappears.</em></h1>
+          <p class="lead">I turn the voice of the customer into products, processes and AI that remove friction — so Verizon’s business customers don’t notice the technology. They just feel that things work.</p>
+          <div class="meta">
+            <a class="btn" href="https://github.com/Shi-get-pro" target="_blank" rel="noopener">See my Work ↗</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/shirly-s" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <button class="btn ghost" type="button" data-open-chat>💬 Ask my AI assistant</button>
+          </div>
+        </div>
+        <div style="position:relative">
+          <div class="portrait">
+            <!-- Photo: profile.jpeg next to index.html -->
+            <img src="profile.jpeg" alt="Mary Shirly" decoding="async" onerror="this.style.display='none'">
+          </div>
+          <div class="badge b2"><div class="n">$1.12M</div><div class="l">saved through billing transparency</div></div>
+          <div class="badge"><div class="n">76.7 → 81.3%</div><div class="l">CES / OSAT in one year</div></div>
+        </div>
+      </div>
+      <div class="ticker">
+        <div><div class="n">20+ yrs</div><div class="l">Telecom &amp; internet industry</div></div>
+        <div><div class="n">110K</div><div class="l">Inbound calls removed</div></div>
+        <div><div class="n">8% → 1%</div><div class="l">Postpaid churn at Airtel</div></div>
+        <div><div class="n">Black Belt</div><div class="l">Six Sigma</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">About</div>
+        <h2>Where customer insight, technology and <em>business outcomes</em> meet.</h2>
+      </div>
+      <div class="about-grid reveal">
+        <p class="about-quote">Two decades across telecom and the internet industry — from <em>Customer Experience and Save Strategy</em> at Airtel to <em>Product-Led Transformation</em> at Verizon.</p>
+        <div class="about-body">
+          <p>Today I lead a team of Product Owners shaping the digital sales and service experience for Verizon’s business customers. I make sure our technology and AI investments turn into <strong>measurable value</strong>: lower customer effort, fewer calls, lower cost and higher satisfaction.</p>
+          <p>My toolkit is <strong>Six Sigma (Black Belt)</strong>, <strong>Product Ownership &amp; Management</strong>, and <strong>Business Analytics</strong> — a Master’s from BITS Pilani — applied with one standard: ambition is the starting point, results are the measure.</p>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill reveal"><div class="no">01</div><h4>Voice of Customer &amp; CX analytics</h4><p>Built a global VoC hub; lifted CES/OSAT 76.7% → 81.3%. CSAT 912/1000 and NPS 96 at Mercedes-Benz.</p></div>
+        <div class="skill reveal"><div class="no">02</div><h4>AI &amp; automation for customer operations</h4><p>AI agent that classifies feedback and triggers emails, Jira tickets and roadmap tasks.</p></div>
+        <div class="skill reveal"><div class="no">03</div><h4>Product strategy &amp; product-led transformation</h4><p>Leads Product Owners; scaled a product-led model across design, engineering, operations and marketing.</p></div>
+        <div class="skill reveal"><div class="no">04</div><h4>Process re-engineering &amp; Six Sigma</h4><p>Re-engineered order-to-cash and billing triggers: 110K calls and $1.12M saved.</p></div>
+        <div class="skill reveal"><div class="no">05</div><h4>Program leadership, business case to launch</h4><p>Ideated, secured funding, operationalized and launched an enterprise-wide transformation.</p></div>
+        <div class="skill reveal"><div class="no">06</div><h4>Executive communication &amp; global alignment</h4><p>Monthly executive readouts; weekly defect triage across global product and engineering.</p></div>
+        <div class="skill reveal"><div class="no">07</div><h4>Retention &amp; predictive analytics</h4><p>Predictive churn models and Save Strategy cut Airtel postpaid churn from 8% to 1%.</p></div>
+        <div class="skill reveal"><div class="no">08</div><h4>Building high-performing teams</h4><p>Built a hybrid VoC team; led teams of 14 to 80 across India and Dubai.</p></div>
+      </div>
+      <div class="tools reveal"><em>Methods &amp; tools</em><span>SAFe 5.0 POPM</span><span>Agile</span><span>Jira</span><span>Generative AI</span><span>Six Sigma</span><span>Business Analytics</span><span>Data Visualization</span><span>Google Colab</span></div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Selected work</div>
+        <h2>Customer friction, <em>removed at scale.</em></h2>
+      </div>
+      <div class="bento">
+        <article class="tile span4 reveal">
+          <span class="tag">Verizon · Billing transformation</span>
+          <h3>Billing transparency: ending early-tenure “bill shock”</h3>
+          <p>Spearheaded an enterprise-wide billing transparency transformation that removed “bill shock” from new customers’ first bills — a systemic onboarding friction point affecting roughly one in five newly acquired customers.</p>
+          <p>Re-engineered the cross-functional order-to-cash flow and billing-trigger architecture across digital and assisted channels, aligning revenue recognition with invoicing cycles.</p>
+          <div class="roles"><span>Ideated</span><span>Sourced funding</span><span>Led</span><span>Operationalized</span><span>Launched</span></div>
+        </article>
+        <div class="tile span2 gold reveal">
+          <div><div class="n">110K</div><div class="l">Inbound calls saved</div></div>
+          <hr>
+          <div><div class="n">$1.12M</div><div class="l">Cost savings</div></div>
+          <hr>
+          <div><div class="n">~1 in 5</div><div class="l">New customers no longer hit by bill shock</div></div>
+        </div>
+
+        <article class="tile span3 reveal">
+          <span class="tag">Verizon Business · Program management</span>
+          <h3>Global Voice of Customer (VoC) capability &amp; CES</h3>
+          <p><span class="lbl">Mandate</span>Set up a dedicated India-based VoC analytics and operations hub to decode B2B customer friction and improve Customer Effort Score across enterprise digital channels.</p>
+          <p><span class="lbl">Execution</span>Built a high-performing hybrid team aligned to the customer-lifecycle pillars. Embedded weekly defect triage across global product and engineering, and presented findings and improvements to executive leadership every month.</p>
+          <p><span class="lbl">Impact</span>Made data-driven roadmap prioritization standard practice, sped up resolution of systemic digital defects, and drove a sustained rise in CES and OSAT.</p>
+          <div class="metric-row">
+            <div><div class="n">76.7 → 81.3%</div><div class="l">CES / OSAT in 12 months</div></div>
+            <div><div class="n">+4.6 pts</div><div class="l">Improvement</div></div>
+          </div>
+        </article>
+
+        <article class="tile span3 reveal">
+          <span class="tag">AI project</span>
+          <h3>An AI agent that turns customer feedback into action</h3>
+          <p>Built an AI agent that reads incoming customer feedback, categorizes it and classifies each item into one of five types — then acts on it, with no manual sorting.</p>
+          <div class="flow">
+            <div><b>01</b><span>Ingest feedback<small>Customer feedback across channels</small></span></div>
+            <div><b>02</b><span>Classify into 5 types<small>AI categorization of every item</small></span></div>
+            <div><b>03</b><span>Take action<small>✉ Educational email · ⚑ Jira defect ticket · ➜ Product Owner roadmap task</small></span></div>
+          </div>
+        </article>
+
+        <div class="tile span2 mini reveal"><div class="n">8% → 1%</div><div class="l">Postpaid churn through predictive churn models and Save Strategy</div><div class="src">Airtel</div></div>
+        <div class="tile span2 mini reveal"><div class="n">912/1000</div><div class="l">Highest CSAT, with an NPS of 96/100</div><div class="src">Mercedes-Benz Sundaram Motors</div></div>
+        <div class="tile span2 mini reveal"><div class="n">+55%</div><div class="l">Sales lift for The Economic Times content operations</div><div class="src">Matrimony.com</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section id="leadership" class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Leadership</div>
+        <h2>Strategy is only as strong as <em>the people carrying it out.</em></h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal"><div class="k">I</div><h3>Set direction</h3><p>Choose the few problems worth solving, and make sure everyone understands why they matter.</p></div>
+        <div class="pillar reveal"><div class="k">II</div><h3>Build alignment</h3><p>Bring design, engineering, operations and marketing around one view of the customer — and make it last.</p></div>
+        <div class="pillar reveal"><div class="k">III</div><h3>Hold a high bar</h3><p>Ambition is the starting point; results are the standard.</p></div>
+      </div>
+      <div class="creed">
+        <div class="q reveal">
+          <blockquote>“I measure my success by what my teams achieve and how much they grow.”</blockquote>
+          <cite>Mary Shirly</cite>
+        </div>
+        <div class="ai reveal">
+          <h3>On AI</h3>
+          <p>AI doesn’t replace judgment — it raises the bar for it. The leaders who succeed won’t run the most pilots; they’ll connect AI to real customer problems, build trust in how it’s used, and help their people grow alongside it.</p>
+        </div>
+      </div>
+      <div class="awards reveal">
+        <em>Honors</em>
+        <span>Best Customer Services Partner — 2019</span>
+        <span>Spotlight Award</span>
+        <span>Agile Championship</span>
+        <span>Best Innovator &amp; Technology Embracer</span>
+        <span>Best Center for Operations</span>
+        <span>Fish Award — Innovation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Experience</div>
+        <h2>Two decades in telecom and <em>the internet industry.</em></h2>
+      </div>
+      <div class="tl">
+        <div class="job now reveal">
+          <div class="when"><strong>Apr 2025 — Present</strong>Verizon Business · Chennai</div>
+          <div>
+            <h3>Associate Director — Technology Strategy</h3>
+            <div class="org">Aug 2026 — Present</div>
+            <p class="sum">Steering AI acceleration initiatives from India:</p>
+            <ul style="margin-top:10px">
+              <li>Owning and delivering the <strong style="color:var(--text)">Velocity Service</strong> programs, which infuse AI into critical customer-experience journeys.</li>
+              <li>Leading <strong style="color:var(--text)">Velocity Support</strong> for Sales Operations, helping employees get faster resolutions through agentic AI and automated ticket creation.</li>
+            </ul>
+            <div class="sub">
+              <div class="rt">Sr. Manager, Product Development &amp; Management</div>
+              <div class="rd">Apr 2025 — Aug 2026</div>
+              <ul>
+                <li>Led 14 Product Owners owning the digital channel experience for business customers across sales and service.</li>
+                <li>Program-managed a global Voice of Customer capability — India-based VoC hub, weekly defect triage, monthly executive readouts — lifting CES/OSAT from 76.7% to 81.3% in one year.</li>
+                <li>Built an AI agent that classifies customer feedback into five types and automatically triggers customer emails, Jira defect tickets and roadmap tasks.</li>
+                <li>Scaled a product-led, AI-driven operating model across Design, Engineering, Operations and Marketing; delivered self-service that raised digital adoption.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="job reveal">
+          <div class="when"><strong>Sep 2020 — Mar 2025</strong>Verizon · Chennai</div>
+          <div>
+            <h3>Senior Manager, Product Experience Management</h3>
+            <div class="org">Verizon</div>
+            <ul>
+              <li>Ideated, funded, led and launched an enterprise-wide billing transparency transformation, ending early-tenure “bill shock” for ~1 in 5 new customers — saving 110K inbound calls and $1.12M.</li>
+              <li>Delivered a Six Sigma Black Belt project driving process improvements.</li>
+              <li>Championed Agile ways of working and mentored the team.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job reveal">
+          <div class="when"><strong>Jun 2018 — Sep 2020</strong>Tamil Nadu</div>
+          <div>
+            <h3>Lead, CRM</h3>
+            <div class="org">Mercedes-Benz Sundaram Motors India</div>
+            <ul><li>Led a cross-functional team of 15; achieved the highest CSAT (912/1000) and NPS (96/100).</li></ul>
+          </div>
+        </div>
+        <div class="job reveal">
+          <div class="when"><strong>Dec 2013 — Sep 2015</strong>Tamil Nadu</div>
+          <div>
+            <h3>Senior Manager, Service Lead</h3>
+            <div class="org">Matrimony.com Limited</div>
+            <ul><li>Led CX transformation across India and Dubai with a team of 80; drove a 55% sales lift for The Economic Times content operations.</li></ul>
+          </div>
+        </div>
+        <div class="job reveal">
+          <div class="when"><strong>Aug 2002 — Aug 2012</strong>Tamil Nadu</div>
+          <div>
+            <h3>Program Manager</h3>
+            <div class="org">Bharti Airtel</div>
+            <ul>
+              <li>Led Customer Experience and Save Strategy; predictive churn models cut postpaid churn from 8% to 1% in Tamil Nadu.</li>
+              <li>Transformed the all-India Customer Response (Email) Center through automation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="edu reveal">
+        <div><small>Master’s</small><h4>Business Analytics</h4><p>BITS Pilani · 2022 — 2025</p></div>
+        <div><small>Certification</small><h4>SAFe® 5.0 POPM</h4><p>Scaled Agile · 2023</p></div>
+        <div><small>Certification</small><h4>Generative AI</h4><p>Oracle</p></div>
+        <div><small>Certification</small><h4>Project Management</h4><p>Simplilearn · 2022</p></div>
+        <div><small>Bachelor’s</small><h4>B.Sc., Mathematics &amp; Statistics</h4><p>University of Madras · 1998 — 2001</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="kicker reveal">Contact</div>
+      <h2 class="reveal">Let’s build something that <em>just works.</em></h2>
+      <p class="reveal">Open to conversations on digital transformation, AI in customer experience, and product leadership.</p>
+      <div class="contact-links reveal">
+        <a class="btn" href="mailto:shirly.vinod@gmail.com">✉ shirly.vinod@gmail.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/shirly-s" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn ghost" href="https://github.com/Shi-get-pro" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn ghost" href="https://drive.google.com/file/d/1Y81Nh9smyNKqKvRJJD6IpfKcf7n2VkQp/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Mary Shirly · Chennai, India</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- ASK MARY CHAT -->
+<button class="chat-fab" id="chatFab" aria-label="Chat with Shirly's AI assistant" aria-expanded="false"><span class="av">MS</span>Ask Shirly</button>
+<div class="chat" id="chat" role="dialog" aria-label="Ask Shirly chat">
+  <div class="chat-h">
+    <div class="av">MS</div>
+    <div><b>Ask Shirly</b><small>My AI assistant · answers from my profile</small></div>
+    <button id="chatClose" aria-label="Close chat">×</button>
+  </div>
+  <div class="chat-b" id="chatBody" aria-live="polite"></div>
+  <div class="chips" id="chips"></div>
+  <form class="chat-f" id="chatForm" autocomplete="off">
+    <input id="chatInput" type="text" placeholder="Ask about my work, skills, experience…" maxlength="300" aria-label="Your question">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+  <div class="chat-note">Automated assistant — for anything specific, email me directly.</div>
+</div>
+
+<script>
+/* ---------- Page behavior ---------- */
+const hdr=document.getElementById('hdr');
+const onScroll=()=>hdr.classList.toggle('scrolled',window.scrollY>20);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+const t=document.querySelector('.menu-toggle'), m=document.getElementById('menu');
+t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o);});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ---------- Ask Shirly: profile-based assistant (no API key needed) ---------- */
+const EMAIL='shirly.vinod@gmail.com';
+const LINKS={
+  linkedin:'https://www.linkedin.com/in/shirly-s',
+  github:'https://github.com/Shi-get-pro',
+  resume:'https://drive.google.com/file/d/1Y81Nh9smyNKqKvRJJD6IpfKcf7n2VkQp/view?usp=sharing'
+};
+const KB=[
+  {k:['hi','hello','hey','namaste','good morning','good evening'],a:"Hello! I'm Shirly's AI assistant, and I answer in her voice from her profile. Ask me about my projects, skills, leadership style or experience."},
+  {k:['who are you','about you','yourself','introduce','summary','background','who is mary','who is shirly'],a:"I'm Mary Shirly, Associate Director of Business Technology & AI at Verizon Business, based in Chennai. I've spent two decades in telecom and the internet industry, from Customer Experience and Save Strategy at Airtel to Product-Led Transformation at Verizon. I turn the voice of the customer into products, processes and AI that remove friction."},
+  {k:['current','role','job','now','today','position','title','verizon business','associate director','responsib','velocity','agentic','acceleration','sales operations'],a:"I'm Associate Director of Technology Strategy at Verizon Business (since Aug 2026), steering AI acceleration initiatives from India. I own and deliver the Velocity Service programs, which infuse AI into critical CX journeys, and Velocity Support for Sales Operations, which gives employees faster agentic resolution and automated ticket creation. I also lead a team of Product Owners shaping the digital sales and service experience for business customers, and I make sure our technology and AI investments turn into measurable value: lower effort, fewer calls, lower cost and higher satisfaction."},
+  {k:['billing','bill shock','invoice','order to cash','order-to-cash','110k','1.12','saving','cost','calls'],a:"My billing transparency program at Verizon is one I'm proud of. About one in five new customers were hit by 'bill shock' on their first bills. I ideated the program, sourced funding, led it and launched it. I re-engineered the order-to-cash flow and billing triggers across digital and assisted channels, aligning revenue recognition with invoicing.\n\nResult: 110K inbound calls saved and $1.12M in cost savings."},
+  {k:['voc','voice of customer','voice of the customer','ces','osat','effort','feedback hub','customer effort','76','81'],a:"I program-managed a global Voice of Customer capability. We set up an India-based VoC analytics and operations hub to decode B2B customer friction across enterprise digital channels. I built a hybrid team around the customer lifecycle, ran weekly defect triage with global product and engineering, and presented findings to executive leadership every month.\n\nCES/OSAT went from 76.7% to 81.3% in one year."},
+  {k:['ai','agent','artificial','machine learning','automation','jira','classify','llm','genai','gen ai'],a:"I built an AI agent that reads customer feedback, classifies each item into one of five types, and then acts on it. It sends educational emails to customers, raises Jira tickets for defect triage, or creates tasks for Product Owners' roadmaps. Feedback reaches the team that can fix it, with no manual sorting.\n\nMy view on AI: it doesn't replace judgment, it raises the bar for it."},
+  {k:['skill','strength','good at','expertise','competenc','capabilit','tools'],a:"My core skills, each backed by delivered work:\n• Voice of Customer & CX analytics\n• AI & automation for customer operations\n• Product strategy & product-led transformation\n• Process re-engineering & Six Sigma (Black Belt)\n• Program leadership, from business case to launch\n• Executive communication & global alignment\n• Retention & predictive analytics\n• Building high-performing teams"},
+  {k:['lead','leader','leadership','leading','manage','management style','team','people','culture','mentor','principle','style'],a:"Strategy is only as strong as the people carrying it out. I lead with three principles:\n\nI. Set direction: choose the few problems worth solving, and make sure everyone understands why they matter.\n\nII. Build alignment: bring design, engineering, operations and marketing around one view of the customer, and make it last.\n\nIII. Hold a high bar: ambition is the starting point; results are the standard.\n\n\"I measure my success by what my teams achieve and how much they grow.\"\n\nOn AI: it doesn't replace judgment, it raises the bar for it. The leaders who succeed won't run the most pilots; they'll connect AI to real customer problems, build trust in how it's used, and help their people grow alongside it.\n\n<a href=\"#leadership\">See my Leadership section ↓</a>"},
+  {k:['airtel','churn','save strategy','retention','predictive','telecom'],a:"I spent ten years at Bharti Airtel as a Program Manager (2002–2012). I led Customer Experience and Save Strategy, and our predictive churn models cut postpaid churn in Tamil Nadu from 8% to 1%. I also transformed the all-India Customer Response (Email) Center through automation."},
+  {k:['mercedes','benz','crm','nps','csat','912'],a:"At Mercedes-Benz Sundaram Motors (2018–2020) I was Lead, CRM. I led a cross-functional team of 15 and we achieved the highest CSAT (912/1000) and an NPS of 96/100."},
+  {k:['matrimony','dubai','economic times'],a:"At Matrimony.com (2013–2015) I was Senior Manager, Service Lead. I led CX transformation across India and Dubai with a team of 80, and drove a 55% sales lift for The Economic Times content operations."},
+  {k:['experience','career','history','worked','companies','previous','journey','years'],a:"My path:\n• Verizon Business: Associate Director, Technology Strategy (2026–now); Sr. Manager, Product Development (2025–2026)\n• Verizon: Sr. Manager, Product Experience (2020–2025)\n• Mercedes-Benz Sundaram Motors: Lead, CRM (2018–2020)\n• Matrimony.com: Sr. Manager, Service Lead (2013–2015)\n• Bharti Airtel: Program Manager (2002–2012)"},
+  {k:['education','degree','study','studied','master','bits','university','qualification','college','certif','safe','popm','oracle'],a:"I hold a Master's in Business Analytics from BITS Pilani (2022–2025), a B.Sc. in Mathematics & Statistics from the University of Madras, and certifications in SAFe 5.0 Product Owner / Product Manager (POPM, 2023), Generative AI from Oracle, and Project Management from Simplilearn. I'm also a Six Sigma Black Belt."},
+  {k:['six sigma','black belt','lean','process','agile'],a:"I'm a Six Sigma Black Belt, and process discipline shapes how I lead. I delivered a Black Belt project at Verizon, re-engineered order-to-cash for the billing program, and championed Agile ways of working (my team won an Agile Championship)."},
+  {k:['award','recognition','honor','achievement','fish','innovation award'],a:"Some recognition I've received: Best Customer Services Partner (2019), Spotlight Award, Agile Championship, Best Innovator & Technology Embracer, Best Center for Operations, and the Fish Award for Innovation."},
+  {k:['resume','cv'],a:'You can view my resume here: <a href="'+LINKS.resume+'" target="_blank" rel="noopener">open resume ↗</a>'},
+  {k:['contact','email','reach','hire','connect','talk','meet','call me','opportunit','job offer','recruit'],a:'I\'d be glad to connect. Email me at <a href="mailto:'+EMAIL+'">'+EMAIL+'</a> or message me on <a href="'+LINKS.linkedin+'" target="_blank" rel="noopener">LinkedIn ↗</a>. I\'m open to conversations on digital transformation, AI in customer experience and product leadership.'},
+  {k:['linkedin'],a:'Here\'s my LinkedIn: <a href="'+LINKS.linkedin+'" target="_blank" rel="noopener">linkedin.com/in/shirly-s ↗</a>'},
+  {k:['github','code','portfolio','repo'],a:'You can see my work on GitHub: <a href="'+LINKS.github+'" target="_blank" rel="noopener">github.com/Shi-get-pro ↗</a>'},
+  {k:['where','location','based','city','chennai','india','relocat'],a:"I'm based in Chennai, Tamil Nadu, India."},
+  {k:['language','speak','hindi','tamil','english'],a:"I speak English, Hindi and Tamil at full professional level."},
+  {k:['believe','philosophy','vision','why','motivat','passion'],a:"I believe the best technology disappears. Customers shouldn't notice it; they should just feel that things work: faster, simpler and more in tune with what they need. Building toward that, and building the teams that make it possible, is what drives me."},
+  {k:['thank','thanks','great','awesome','cool','nice'],a:"Thank you! Anything else you'd like to know about my work?"},
+  {k:['bye','goodbye','see you'],a:"Thanks for stopping by! Feel free to reach out at "+EMAIL+"."}
+];
+const FALLBACK='I don\'t have that in my profile yet. Ask me about my projects, skills, leadership or experience, or email me directly at <a href="mailto:'+EMAIL+'">'+EMAIL+'</a>.';
+const SUGGEST=['Tell me about yourself','What are your top skills?','The billing project','Your AI agent','How do you lead?','How can I contact you?'];
+
+function norm(s){return (' '+s.toLowerCase().replace(/[^a-z0-9.%\- ]/g,' ').replace(/\s+/g,' ')+' ');}
+function answer(q){
+  const n=norm(q); let best=null,score=0;
+  KB.forEach(item=>{
+    let s=0;
+    item.k.forEach(k=>{
+      const kk=k.toLowerCase();
+      if(kk.length<=3){ if(n.includes(' '+kk+' ')) s+=2; }
+      else if(n.includes(kk)) s+= kk.includes(' ')?3:2;
+    });
+    if(s>score){score=s;best=item;}
+  });
+  return score>0?best.a:FALLBACK;
+}
+
+const fab=document.getElementById('chatFab'), box=document.getElementById('chat'),
+      body=document.getElementById('chatBody'), form=document.getElementById('chatForm'),
+      input=document.getElementById('chatInput'), chips=document.getElementById('chips');
+let started=false;
+
+function add(html,who){
+  const d=document.createElement('div'); d.className='msg '+who;
+  if(who==='me') d.textContent=html; else d.innerHTML=html;
+  body.appendChild(d); body.scrollTop=body.scrollHeight; return d;
+}
+function botSay(html){
+  const t=add('<span class="typing"><i></i><i></i><i></i></span>','bot');
+  setTimeout(()=>{t.innerHTML=html;body.scrollTop=Math.max(0,t.offsetTop-12);},500+Math.min(900,html.length*3));
+}
+function renderChips(){
+  chips.innerHTML='';
+  SUGGEST.forEach(s=>{const b=document.createElement('button');b.type='button';b.textContent=s;b.onclick=()=>ask(s);chips.appendChild(b);});
+}
+function ask(q){
+  q=q.trim(); if(!q) return;
+  add(q,'me'); input.value='';
+  botSay(answer(q));
+}
+function openChat(){
+  box.classList.add('open'); fab.setAttribute('aria-expanded','true');
+  if(!started){started=true;renderChips();
+    botSay("Hi, I'm Shirly's AI assistant. 👋 I answer in Shirly's voice, from her profile. Ask me about my projects, skills, leadership or experience.");}
+  setTimeout(()=>input.focus(),250);
+}
+function closeChat(){box.classList.remove('open');fab.setAttribute('aria-expanded','false');}
+fab.addEventListener('click',()=>box.classList.contains('open')?closeChat():openChat());
+document.getElementById('chatClose').addEventListener('click',closeChat);
+document.querySelectorAll('[data-open-chat]').forEach(b=>b.addEventListener('click',openChat));
+form.addEventListener('submit',e=>{e.preventDefault();ask(input.value);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeChat();});
+</script>
+</body>
+</html>
